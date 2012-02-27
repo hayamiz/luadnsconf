@@ -11,3 +11,5 @@ a(concat("lists", _a),		"59.106.186.140")
 
 mx(_a, concat("mailhost", _a), 10)
 mx(concat("lists", _a), concat("mailhost", _a), 10)
+txt(_a, "v=spf1 a mx ptr ip4:59.106.186.140 ptr:mailhost.hayamiz.com mx:mailhost.hayamiz.com mx:hayamiz.com -all")
+txt(concat("lists", _a), "v=spf1 a mx ptr ip4:59.106.186.140 ptr:mailhost.hayamiz.com mx:mailhost.hayamiz.com mx:hayamiz.com -all")
