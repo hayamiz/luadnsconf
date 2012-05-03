@@ -4,7 +4,7 @@
 
 -- parameters
 ttl = 60
-ipaddr = "59.106.186.140"
+ipaddr = "49.212.150.25"
 
 
 -- configurations
