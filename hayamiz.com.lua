@@ -3,7 +3,7 @@
 -- _a = "hayamiz.com"
 
 -- parameters
-ttl = 60
+ttl = 3600
 ipaddr = "49.212.150.25"
 
 
