@@ -2,14 +2,20 @@
 -- Variable _a is replaced with zone name by Luadns
 -- _a = "hayamiz.com"
 
-a(_a, "59.106.186.140")
-cname("www", _a)
-cname("volvox", _a)
+-- parameters
+ttl = 60
+ipaddr = "59.106.186.140"
 
-a(concat("mailhost", _a),	"59.106.186.140")
-a(concat("lists", _a),		"59.106.186.140")
 
-mx(_a, concat("mailhost", _a), 10)
-mx(concat("lists", _a), concat("mailhost", _a), 10)
-txt(_a, "v=spf1 a mx ptr ip4:59.106.186.140 ptr:mailhost.hayamiz.com mx:mailhost.hayamiz.com mx:hayamiz.com -all")
-txt(concat("lists", _a), "v=spf1 a mx ptr ip4:59.106.186.140 ptr:mailhost.hayamiz.com mx:mailhost.hayamiz.com mx:hayamiz.com -all")
+-- configurations
+a(_a, ipaddr, ttl)
+cname("www", _a, ttl)
+cname("volvox", _a, ttl)
+
+a(concat("mailhost", _a),	ipaddr, ttl)
+a(concat("lists", _a),		ipaddr, ttl)
+
+mx(_a, concat("mailhost", _a), 10, ttl)
+mx(concat("lists", _a), concat("mailhost", _a), 10, ttl)
+txt(_a, "v=spf1 a mx ptr ip4:" .. ipaddr .. " ptr:mailhost." .. _a .. " mx:mailhost." .. _a .. " mx:" .. _a .. " -all", ttl)
+txt(concat("lists", _a), "v=spf1 a mx ptr ip4:" .. ipaddr .. " ptr:mailhost." .. _a .. " mx:mailhost." .. _a .. " mx:" .. _a .. " -all", ttl)
