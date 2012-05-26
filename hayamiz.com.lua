@@ -16,7 +16,7 @@ a(concat("mailhost", _a),	ipaddr, ttl)
 a(concat("lists", _a),		ipaddr, ttl)
 
 -- IPv6 test
-a(concat("testv4", _a),	ipaddr, ttl)
+a(concat("testv4", _a),	"59.106.186.140", ttl)
 aaaa(concat("testv6", _a),	"2001:e41:3b6a:ba8c::1", ttl)
 
 mx(_a, concat("mailhost", _a), 10, ttl)
