@@ -8,7 +8,7 @@ ipaddr = "49.212.150.25"
 
 -- configurations
 a(_a, ipaddr, ttl)
-cname("www", _a, ttl)
+cname("www", "ghs.google.com", ttl)
 
 a(concat("mail", _a),	ipaddr, ttl)
 a(concat("mailhost", _a),	ipaddr, ttl)
