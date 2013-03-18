@@ -8,6 +8,8 @@ ipaddr = "49.212.150.25"
 
 -- configurations
 a(_a, ipaddr, ttl)
+a(concat("iwana", _a),	ipaddr, ttl)
+
 cname("www", _a, ttl)
 cname("jenkins", _a, ttl)
 
