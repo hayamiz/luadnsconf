@@ -12,6 +12,7 @@ a(concat("iwana", _a),	ipaddr, ttl)
 
 cname("www", _a, ttl)
 cname("jenkins", _a, ttl)
+cname("package", _a, ttl)
 
 a(concat("mail", _a),	ipaddr, ttl)
 a(concat("mailhost", _a),	ipaddr, ttl)
